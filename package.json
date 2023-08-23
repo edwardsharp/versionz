@@ -2,9 +2,19 @@
   "name": "versionz",
   "version": "0.0.1",
   "description": "prototype exploring versioned exports a la deno!",
-  "main": "src/index.ts",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts",
+    "0.0.1": "./dist/0.0.1/index.ts"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "write-package-exports": "node utilz/writePackageExports.js",
+    "bump": "npm version patch -m \"bump version to %s\"",
+    "build:version": "tsc --outDir dist/${npm_package_version}",
+    "build:root": "tsc --outDir dist/",
+    "build": "npm run bump && npm run write-package-exports && npm run build:root && npm run build:version",
+    "typecheck": "tsc --noEmit"
   },
   "keywords": [
     "versioning",
