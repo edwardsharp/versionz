@@ -26,18 +26,22 @@ console.log("multiply@0.27.2", multiply(6, 6, 6));
 
 ## proto
 
-...so then this lil' experiment can enable like:
+...so then this lil' experiment can enable something like:
 
 ```js
 import { main as main1 } from "versionz/0.0.1";
 import { main as main2 } from "versionz/0.0.2";
-import { main as main3 } from "versionz/0.0.3";
-import { main as main4, newFn } from "versionz/0.0.4";
+import { main as main3, newFn as newFn3 } from "versionz/0.0.3"; // newFn was introduced in v0.0.3!
+import { main as main4, newFn as newFn4 } from "versionz/0.0.4";
+import { main, newFn } from "versionz/latest";
 
 main1();
 main2();
 main3();
+newFn3();
 main4();
+newFn4();
+main();
 newFn();
 ```
 
@@ -48,6 +52,9 @@ $ node example/index.js
 hi from version 0.0.1! 👋
 hi from version 0.0.2! 👋
 hi from version 0.0.3! 👋
+ohai! this is newFn in version 0.0.3!!
+hi from version 0.0.4! 👋
+ohai! this is newFn in version 0.0.4!!
 hi from version 0.0.4! 👋
 ohai! this is newFn in version 0.0.4!!
 ```

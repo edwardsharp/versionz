@@ -4,6 +4,7 @@
   "description": "prototype exploring versioned exports a la deno!",
   "type": "module",
   "exports": {
+    "./latest": "./dist/index.js",
     "./0.0.1": "./dist/0.0.1/index.js",
     "./0.0.2": "./dist/0.0.2/index.js",
     "./0.0.3": "./dist/0.0.3/index.js",
