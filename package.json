@@ -11,9 +11,10 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "write-package-exports": "node utilz/writePackageExports.js",
     "bump": "npm version patch -m \"bump version to %s\"",
+    "bump-n-build": "npm run bump && npm run build",
     "build:version": "tsc --outDir dist/${npm_package_version}",
     "build:root": "tsc --outDir dist/",
-    "build": "npm run bump && npm run write-package-exports && npm run build:root && npm run build:version",
+    "build": "npm run write-package-exports && npm run build:root && npm run build:version",
     "typecheck": "tsc --noEmit"
   },
   "keywords": [
