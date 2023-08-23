@@ -9,9 +9,13 @@ readFile("package.json", function (err, data) {
   if (exports[version]) {
     console.info("no new package exports needed.");
   } else {
-    console.warn("needs new version export!");
+    console.warn("needs new version export! writing package.json...");
+    const val = `./dist/${version}/index.ts`;
+    json.exports[version] = val;
+    writeFile("package.json", JSON.stringify(json, null, 2), (err) => {
+      if (err) {
+        console.warn("error writing package.json!", err);
+      }
+    });
   }
-  // json.push('search result: ' + currentSearchResult)
-
-  // writeFile("results.json", JSON.stringify(json))
 });
