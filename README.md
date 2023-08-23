@@ -1,10 +1,16 @@
 # versionz
 
-prototype exploring versioned exports a la deno!
+a lil' prototype exploring versioned exports!
+
+note: you probably shouldn't do this. just use [deno](https://deno.land)!
 
 ## pretense
 
-with deno you can import stuff from different versions of the same package. for example:
+nodejs is a ways away from [http imports](https://nodejs.org/api/esm.html#https-and-http-imports) 😬
+
+with deno you can import stuff from different versions of the same package; and that's pretty cool.
+
+for example:
 
 ```ts
 // ramda-example.ts
