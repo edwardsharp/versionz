@@ -4,7 +4,7 @@
   "description": "prototype exploring versioned exports a la deno!",
   "type": "module",
   "exports": {
-    "./latest": "./dist/index.js",
+    "./latest": "./dist/latest/index.js",
     "./0.0.1": "./dist/0.0.1/index.js",
     "./0.0.2": "./dist/0.0.2/index.js",
     "./0.0.3": "./dist/0.0.3/index.js",
@@ -16,8 +16,8 @@
     "bump": "npm version patch --no-git-tag-version",
     "bump-n-build": "npm run bump && npm run build",
     "build:version": "tsc --outDir dist/${npm_package_version}",
-    "build:root": "tsc --outDir dist/",
-    "build": "npm run write-package-exports && npm run build:root && npm run build:version",
+    "build:latest": "tsc --outDir dist/latest",
+    "build": "npm run write-package-exports && npm run build:latest && npm run build:version",
     "typecheck": "tsc --noEmit"
   },
   "keywords": [

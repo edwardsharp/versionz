@@ -74,7 +74,7 @@ there's some package.json scripts that will:
 
 1. bump package.json's `version` using `npm version patch --no-git-tag-version`
 2. re-write (if needed) package.json's `exports` with the new version. see: [utilz/writePackageExports.js](utilz/writePackageExports.js)
-3. tsc build to the root of dist/
+3. tsc build to `dist/latest/`
 4. and finally tsc build into a version folder in `dist/` (uses `process.env.npm_package_version` which is available to npm scripts!)
 
 check out the entire [package.json](package.json)
