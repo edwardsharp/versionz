@@ -1,0 +1,20 @@
+{
+  "name": "versionz",
+  "version": "0.0.1",
+  "description": "prototype exploring versioned exports a la deno!",
+  "main": "src/index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "versioning",
+    "deno-inspiried",
+    "crackpot",
+    "idea"
+  ],
+  "author": "edward.sharp <edward@edwardsharp.net>",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "typescript": "^5.1.6"
+  }
+}
